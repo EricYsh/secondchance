@@ -58,15 +58,15 @@
                 
             </li>
             
-            <li class="<?php if(isset($_GET['pay_offline'])){ echo "active"; } ?>">
-                
-                <a href="my_account.php?pay_offline">
-                    
-                    <i class="fa fa-bolt"></i> Pay Offline
-                    
-                </a>
-                
-            </li>
+<!--            <li class="--><?php //if(isset($_GET['pay_offline'])){ echo "active"; } ?><!--">-->
+<!--                -->
+<!--                <a href="my_account.php?pay_offline">-->
+<!--                    -->
+<!--                    <i class="fa fa-bolt"></i> Pay Offline-->
+<!--                    -->
+<!--                </a>-->
+<!--                -->
+<!--            </li>-->
             
             <li class="<?php if(isset($_GET['edit_account'])){ echo "active"; } ?>">
                 
@@ -98,15 +98,15 @@
                 
             </li>
             
-            <li>
-                
-                <a href="logout.php">
-                    
-                    <i class="fa fa-sign-out"></i> Log Out
-                    
-                </a>
-                
-            </li>
+<!--            <li>-->
+<!--                -->
+<!--                <a href="logout.php">-->
+<!--                    -->
+<!--                    <i class="fa fa-sign-out"></i> Log Out-->
+<!--                    -->
+<!--                </a>-->
+<!--                -->
+<!--            </li>-->
             
         </ul><!--  nav-pills nav-stacked nav Begin  -->
         

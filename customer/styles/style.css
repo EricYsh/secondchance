@@ -98,8 +98,8 @@ body{
 }
 .btn-primary{
     color: rgb(255, 255, 255);
-    background: rgb(79, 191, 168);
-    border-color: rgb(65, 179, 156);
+    background: rgb(58, 98, 215);
+    border-color: rgb(58, 98, 215);
 }
 #search .navbar-form{
     float: right;

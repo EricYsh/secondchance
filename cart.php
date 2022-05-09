@@ -19,14 +19,16 @@
                </ul><!-- breadcrumb Finish -->
                
            </div><!-- col-md-12 Finish -->
+
+           <div class="col-md-2"></div>
            
-           <div id="cart" class="col-md-9"><!-- col-md-9 Begin -->
+           <div id="cart" class="col-md-8"><!-- col-md-9 Begin -->
                
                <div class="box"><!-- box Begin -->
                    
                    <form action="cart.php" method="post" enctype="multipart/form-data"><!-- form Begin -->
                        
-                       <h1>Shopping Cart</h1>
+                       <h1>My Cart</h1>
                        
                        <?php 
                        
@@ -40,8 +42,6 @@
                        
                        ?>
                        
-                       <p class="text-muted">You currently have <?php echo $count; ?> item(s) in your cart</p>
-                       
                        <div class="table-responsive"><!-- table-responsive Begin -->
                            
                            <table class="table"><!-- table Begin -->
@@ -52,8 +52,7 @@
                                        
                                        <th colspan="2">Product</th>
                                        <th>Quantity</th>
-                                       <th>Unit Price</th>
-                                       <th>Size</th>
+                                       <th>Price</th>
                                        <th colspan="1">Delete</th>
                                        <th colspan="2">Sub-Total</th>
                                        
@@ -70,8 +69,6 @@
                                    while($row_cart = mysqli_fetch_array($run_cart)){
                                        
                                      $pro_id = $row_cart['p_id'];
-                                       
-                                     $pro_size = $row_cart['size'];
                                        
                                      $pro_qty = $row_cart['qty'];
                                        
@@ -116,12 +113,6 @@
                                        <td>
                                            
                                            <?php echo $only_price; ?>
-                                           
-                                       </td>
-                                       
-                                       <td>
-                                           
-                                           <?php echo $pro_size; ?>
                                            
                                        </td>
                                        
@@ -222,116 +213,10 @@
                
                ?>
                
-               <div id="row same-heigh-row"><!-- #row same-heigh-row Begin -->
-                   <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Begin -->
-                       <div class="box same-height headline"><!-- box same-height headline Begin -->
-                           <h3 class="text-center">Products You Maybe Like</h3>
-                       </div><!-- box same-height headline Finish -->
-                   </div><!-- col-md-3 col-sm-6 Finish -->
-                   
-                   <?php 
-                   
-                   $get_products = "select * from products order by rand() LIMIT 0,3";
-                   
-                   $run_products = mysqli_query($con,$get_products);
-                   
-                   while($row_products=mysqli_fetch_array($run_products)){
-                       
-                       $pro_id = $row_products['product_id'];
-                       
-                       $pro_title = $row_products['product_title'];
-                       
-                       $pro_price = $row_products['product_price'];
-                       
-                       $pro_img1 = $row_products['product_img1'];
-                       
-                       echo "
-                       
-                    <div class='col-md-3 col-sm-6 center-responsive'><!-- col-md-3 col-sm-6 center-responsive Begin -->
-                       <div class='product same-height'><!-- product same-height Begin -->
-                           <a href='details.php?pro_id=$pro_id'>
-                               <img class='img-responsive' src='admin_area/product_images/$pro_img1' alt='Product 6'>
-                            </a>
-                            
-                            <div class='text'><!-- text Begin -->
-                                <h3><a href='details.php?pro_id=$pro_id'> $pro_title </a></h3>
-                                
-                                <p class='price'>$$pro_price</p>
-                                
-                            </div><!-- text Finish -->
-                            
-                        </div><!-- product same-height Finish -->
-                   </div><!-- col-md-3 col-sm-6 center-responsive Finish -->
-                   
-                       ";
-                       
-                   }
-                   
-                   ?>
-                   
-               </div><!-- #row same-heigh-row Finish -->
-               
            </div><!-- col-md-9 Finish -->
-           
-           <div class="col-md-3"><!-- col-md-3 Begin -->
-               
-               <div id="order-summary" class="box"><!-- box Begin -->
-                   
-                   <div class="box-header"><!-- box-header Begin -->
-                       
-                       <h3>Order Summary</h3>
-                       
-                   </div><!-- box-header Finish -->
-                   
-                   <p class="text-muted"><!-- text-muted Begin -->
-                       
-                       Shipping and additional costs are calculated based on value you have entered
-                       
-                   </p><!-- text-muted Finish -->
-                   
-                   <div class="table-responsive"><!-- table-responsive Begin -->
-                       
-                       <table class="table"><!-- table Begin -->
-                           
-                           <tbody><!-- tbody Begin -->
-                               
-                               <tr><!-- tr Begin -->
-                                   
-                                   <td> Order All Sub-Total </td>
-                                   <th> $<?php echo $total; ?> </th>
-                                   
-                               </tr><!-- tr Finish -->
-                               
-                               <tr><!-- tr Begin -->
-                                   
-                                   <td> Shipping and Handling </td>
-                                   <td> $0 </td>
-                                   
-                               </tr><!-- tr Finish -->
-                               
-                               <tr><!-- tr Begin -->
-                                   
-                                   <td> Tax </td>
-                                   <th> $0 </th>
-                                   
-                               </tr><!-- tr Finish -->
-                               
-                               <tr class="total"><!-- tr Begin -->
-                                   
-                                   <td> Total </td>
-                                   <th> $<?php echo $total; ?> </th>
-                                   
-                               </tr><!-- tr Finish -->
-                               
-                           </tbody><!-- tbody Finish -->
-                           
-                       </table><!-- table Finish -->
-                       
-                   </div><!-- table-responsive Finish -->
-                   
-               </div><!-- box Finish -->
-               
-           </div><!-- col-md-3 Finish -->
+
+           <div class="col-md-2"></div>
+
            
        </div><!-- container Finish -->
    </div><!-- #content Finish -->

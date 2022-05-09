@@ -1,6 +1,6 @@
 <center><!--  center Begin  -->
     
-    <h1> Pay Offline Using Method </h1>
+    <h1> Payment Methods </h1>
     
     <p class="text-muted">
         

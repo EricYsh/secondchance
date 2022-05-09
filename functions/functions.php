@@ -115,13 +115,7 @@ function getPro(){
                     
                         <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
 
-                            View Details
-
-                        </a>
-                    
-                        <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>
-
-                            <i class='fa fa-shopping-cart'></i> Add to Cart
+                            See More
 
                         </a>
                     

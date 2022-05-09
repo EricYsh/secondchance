@@ -6,10 +6,8 @@
           
           <h1> Login </h1>
           
-          <p class="lead"> Already have our account..? </p>
-          
-          <p class="text-muted"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, maxime. Laudantium omnis, ullam, fuga officia provident error corporis consectetur aliquid corrupti recusandae minus ipsam quasi. Perspiciatis nemo, nostrum magni odit! </p>
-          
+<!--          <p class="lead"> Already have our account..? </p>-->
+
       </center><!-- center Finish -->
       
   </div><!-- box-header Finish -->
@@ -34,7 +32,7 @@
       
       <div class="text-center"><!-- text-center Begin -->
           
-          <button name="login" value="Login" class="btn btn-primary">
+          <button name="login" value="Login" class="btn btn-primary" style="font-size: 22px">
               
               <i class="fa fa-sign-in"></i> Login
               
@@ -48,7 +46,7 @@
       
      <a href="customer_register.php">
          
-         <h3> Dont have account..? Register here </h3>
+         <h4> No Account? Register here </h4>
          
      </a> 
       
@@ -101,7 +99,7 @@ if(isset($_POST['login'])){
         
        echo "<script>alert('You are Logged in')</script>"; 
         
-       echo "<script>window.open('checkout.php','_self')</script>";
+       echo "<script>window.open('index.php','_self')</script>";
         
     }
     
