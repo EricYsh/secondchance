@@ -29,137 +29,38 @@ include("includes/header.php");
 
     <div class="col-md-12"><!-- col-md-12 Begin -->
 
-        <?php
-
-        $aPcat = array();
-
-        // This is for products_categories Begin //
-        if(isset($_REQUEST['p_cat'])&&is_array($_REQUEST['p_cat'])){
-
-            foreach($_REQUEST['p_cat'] as $sKey=>$sVal){
-
-                if((int)$sVal!=0){
-
-                    $aPcat[(int)$sVal] = (int)$sVal;
-
-                }
-
-            }
-
-        }
-        // This is for products_categories Finisih //
-
-        ?>
-
         <div class="panel panel-default sidebar-menu"><!-- panel panel-default sidebar-menu Begin -->
 
             <div class="panel-collapse collapse-data"><!-- panel-collapse collapse-data Begin -->
 
                 <div class="panel-body"><!-- panel-body 1 Begin -->
-                    <div class="input-group"><!-- input-group Begin -->
-                    </div><!-- input-group Finish -->
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-success btn-lg btn-block">Electronic</button>
+                    </div>
+
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Fashion</button>
+                    </div>
+
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-dark btn-lg btn-block">Sports</button>
+                    </div>
+
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-info btn-lg btn-block">Tools</button>
+                    </div>
+
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-warning btn-lg btn-block">Luggage</button>
+                    </div>
+
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-danger btn-lg btn-block">Others</button>
+                    </div>
                 </div><!-- panel-body 1 Finish -->
-                <div class="panel-body scroll-menu"><!-- panel-body 2 Begin -->
-                    <ul class="nav nav-pills nav-stacked category-menu" id="dev-p-cat"><!-- nav nav-pills nav-stacked category-menu Begin -->
-
-                        <?php
-
-                        $get_p_cat = "select * from product_categories where p_cat_top='yes'";
-                        $run_p_cat = mysqli_query($con,$get_p_cat);
-
-                        while($row_p_cat=mysqli_fetch_array($run_p_cat)){
-
-                            $p_cat_id = $row_p_cat['p_cat_id'];
-                            $p_cat_title = $row_p_cat['p_cat_title'];
-                            $p_cat_image = $row_p_cat['p_cat_image'];
-
-                            if($p_cat_image == ""){
-
-                            }else{
-
-                                $p_cat_image = "<img src='admin_area/other_images/$p_cat_image' width='20px'>&nbsp;";
-
-                            }
-
-                            echo "
-                    <li style='background:#dddddd' class='checkbox checkbox-primary'>
-
-                        <a>
-
-                            <label>
-
-                                <input ";
-
-                            if(isset($aPcat[$p_cat_id])){
-                                echo "checked='checked'";
-                            }
-
-                            echo " value='$p_cat_id' type='checkbox' class='get_p_cat' name='p_cat'>
-
-                                <span>
-                                $p_cat_image
-                                $p_cat_title
-                                </span>
-
-                            </label>
-
-                        </a>
-                    
-                    </li>
-                    ";
-
-                        }
-
-                        $get_p_cat = "select * from product_categories where p_cat_top='no'";
-                        $run_p_cat = mysqli_query($con,$get_p_cat);
-
-                        while($row_p_cat=mysqli_fetch_array($run_p_cat)){
-
-                            $p_cat_id = $row_p_cat['p_cat_id'];
-                            $p_cat_title = $row_p_cat['p_cat_title'];
-                            $p_cat_image = $row_p_cat['p_cat_image'];
-
-                            if($p_cat_image == ""){
-
-                            }else{
-
-                                $p_cat_image = "<img src='admin_area/other_images/$p_cat_image' width='20px'>&nbsp;";
-
-                            }
-
-                            echo "
-                    <li class='checkbox checkbox-primary'>
-
-                        <a>
-
-                            <label>
-
-                                <input ";
-
-                            if(isset($aPcat[$p_cat_id])){
-                                echo "checked='checked'";
-                            }
-
-                            echo " value='$p_cat_id' type='checkbox' class='get_p_cat' name='p_cat'>
-
-                                <span>
-                                $p_cat_image
-                                $p_cat_title
-                                </span>
-
-                            </label>
-
-                        </a>
-                    
-                    </li>
-                    ";
-
-                        }
-
-                        ?>
-
-                    </ul><!-- nav nav-pills nav-stacked category-menu Finish -->
-                </div><!-- panel-body 2 Finish -->
+<!--                <div class="panel-body scroll-menu">-->
+<!---->
+<!--                </div>-->
 
             </div><!-- panel-collapse collapse-data Finish -->
 

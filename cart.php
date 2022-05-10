@@ -20,9 +20,9 @@
                
            </div><!-- col-md-12 Finish -->
 
-           <div class="col-md-2"></div>
+<!--           <div class="col-md-2"></div>-->
            
-           <div id="cart" class="col-md-8"><!-- col-md-9 Begin -->
+           <div id="cart" class="col-md-12"><!-- col-md-9 Begin -->
                
                <div class="box"><!-- box Begin -->
                    
@@ -53,8 +53,8 @@
                                        <th colspan="2">Product</th>
                                        <th>Quantity</th>
                                        <th>Price</th>
+                                       <th colspan="1">Sub-Total</th>
                                        <th colspan="1">Delete</th>
-                                       <th colspan="2">Sub-Total</th>
                                        
                                    </tr><!-- tr Finish -->
                                    
@@ -116,16 +116,19 @@
                                            
                                        </td>
                                        
-                                       <td>
-                                           
-                                           <input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>">
-                                           
-                                       </td>
+
                                        
                                        <td>
                                            
                                            $<?php echo $sub_total; ?>
                                            
+                                       </td>
+
+                                       <td>
+
+                                           <input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>">
+                                           <button type="button" class="btn btn-danger btn-xs">Delete</button>
+
                                        </td>
                                        
                                    </tr><!-- tr Finish -->
@@ -215,7 +218,7 @@
                
            </div><!-- col-md-9 Finish -->
 
-           <div class="col-md-2"></div>
+<!--           <div class="col-md-2"></div>-->
 
            
        </div><!-- container Finish -->

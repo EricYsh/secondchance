@@ -226,53 +226,63 @@ if(isset($_GET['pro_id'])){
            </div><!-- col-md-12 Finish -->
            
            <div class="col-md-12"><!-- col-md-9 Begin -->
-               <div id="productMain" class="row"><!-- row Begin -->
-                   <div class="col-sm-6"><!-- col-sm-6 Begin -->
-                       <div id="mainImage"><!-- #mainImage Begin -->
-                           <div id="myCarousel" class="carousel slide" data-ride="carousel"><!-- carousel slide Begin -->
-                               <ol class="carousel-indicators"><!-- carousel-indicators Begin -->
-                                   <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
-                                   <li data-target="#myCarousel" data-slide-to="1"></li>
-                                   <li data-target="#myCarousel" data-slide-to="2"></li>
-                               </ol><!-- carousel-indicators Finish -->
-                               
-                               <div class="carousel-inner">
-                                   <div class="item active">
-                                       <center><img class="img-responsive" src="admin_area/product_images/<?php echo $pro_img1; ?>" alt="Product 3-a"></center>
-                                   </div>
-                                   <div class="item">
-                                       <center><img class="img-responsive" src="admin_area/product_images/<?php echo $pro_img2; ?>" alt="Product 3-b"></center>
-                                   </div>
-                                   <div class="item">
-                                       <center><img class="img-responsive" src="admin_area/product_images/<?php echo $pro_img3; ?>" alt="Product 3-c"></center>
-                                   </div>
-                               </div>
-                               
-                               <a href="#myCarousel" class="left carousel-control" data-slide="prev"><!-- left carousel-control Begin -->
-                                   <span class="glyphicon glyphicon-chevron-left"></span>
-                                   <span class="sr-only">Previous</span>
-                               </a><!-- left carousel-control Finish -->
-                               
-                               <a href="#myCarousel" class="right carousel-control" data-slide="next"><!-- right carousel-control Begin -->
-                                   <span class="glyphicon glyphicon-chevron-right"></span>
-                                   <span class="sr-only">Previous</span>
-                               </a><!-- right carousel-control Finish -->
-                               
-                           </div><!-- carousel slide Finish -->
-                       </div><!-- mainImage Finish -->
-                   </div><!-- col-sm-6 Finish -->
+               <div id="productMain" class="row">
+<!--                   <div class="col-sm-1">-->
+<!--                       <div id="mainImage">-->
+<!--                           <div class="item active">-->
+<!--                               <center><img class="img-responsive" src="admin_area/product_images/--><?php //echo $pro_img1; ?><!--" alt="Product 3-a"></center>-->
+<!--                           </div>-->
+<!--                           <div id="myCarousel" class="carousel slide" data-ride="carousel">-->
+<!--                               <ol class="carousel-indicators">-->
+<!--                                   <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>-->
+<!--                                   <li data-target="#myCarousel" data-slide-to="1"></li>-->
+<!--                                   <li data-target="#myCarousel" data-slide-to="2"></li>-->
+<!--                               </ol>-->
+<!--                               -->
+<!--                               <div class="carousel-inner">-->
+<!--                                   <div class="item active">-->
+<!--                                       <center><img class="img-responsive" src="admin_area/product_images/--><?php //echo $pro_img1; ?><!--" alt="Product 3-a"></center>-->
+<!--                                   </div>-->
+<!--                                   <div class="item">-->
+<!--                                       <center><img class="img-responsive" src="admin_area/product_images/--><?php //echo $pro_img2; ?><!--" alt="Product 3-b"></center>-->
+<!--                                   </div>-->
+<!--                                   <div class="item">-->
+<!--                                       <center><img class="img-responsive" src="admin_area/product_images/--><?php //echo $pro_img3; ?><!--" alt="Product 3-c"></center>-->
+<!--                                   </div>-->
+<!--                               </div>-->
+<!--                               -->
+<!--                               <a href="#myCarousel" class="left carousel-control" data-slide="prev">-->
+<!--                                   <span class="glyphicon glyphicon-chevron-left"></span>-->
+<!--                                   <span class="sr-only">Previous</span>-->
+<!--                               </a>-->
+<!--                               -->
+<!--                               <a href="#myCarousel" class="right carousel-control" data-slide="next">-->
+<!--                                   <span class="glyphicon glyphicon-chevron-right"></span>-->
+<!--                                   <span class="sr-only">Previous</span>-->
+<!--                               </a>-->
+<!--                               -->
+<!--                           </div>-->
+<!--                       </div>-->
+<!--                   </div>-->
                    
-                   <div class="col-sm-6"><!-- col-sm-6 Begin -->
-                       <div class="box"><!-- box Begin -->
+                   <div class="col-sm-12"><!-- col-sm-6 Begin -->
+<!--                       <div class="box">-->
+                           <div class="col-md-3">
+                           <div class="item active">
+                               <center><img class="img-responsive" src="admin_area/product_images/<?php echo $pro_img1; ?>" alt="Product 3-a"></center>
+                           </div>
+                           </div>
+
+                           <div class="col-md-6">
                            <h1 class="text-center"> <?php echo $pro_title; ?> </h1>
                            
                            <?php add_cart(); ?>
                            
                            <form action="details.php?add_cart=<?php echo $product_id; ?>" class="form-horizontal" method="post"><!-- form-horizontal Begin -->
                                <div class="form-group"><!-- form-group Begin -->
-                                   <label for="" class="col-md-5 control-label">Products Quantity</label>
+                                   <label for="" class="col-md-6 control-label">Products Quantity</label>
                                    
-                                   <div class="col-md-7"><!-- col-md-7 Begin -->
+                                   <div class="col-md-3"><!-- col-md-7 Begin -->
                                           <select name="product_qty" id="" class="form-control"><!-- select Begin -->
                                            <option>1</option>
                                            <option>2</option>
@@ -290,16 +300,17 @@ if(isset($_GET['pro_id'])){
                                <p class="text-center buttons"><button class="btn btn-primary i fa fa-shopping-cart"> Add to cart</button></p>
                                
                            </form><!-- form-horizontal Finish -->
-                           
-                       </div><!-- box Finish -->
+                           </div>
+<!--                       </div>-->
+                       <div class="col-md-6"></div>
                        
                    </div><!-- col-sm-6 Finish -->
+<!--                   <div class="col-sm-3"></div>-->
                    
-                   
-               </div><!-- row Finish -->
+               </div>
                
                <div class="box" id="details"><!-- box Begin -->
-                       
+
                        <h4>Product Details</h4>
                    
                    <p>
