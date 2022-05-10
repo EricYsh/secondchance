@@ -318,16 +318,13 @@ if(isset($_GET['pro_id'])){
                        <?php echo $pro_desc; ?>
                        
                    </p>
-                   
-                       <h4>Size</h4>
+
+                   <hr>
+                       <h4>QA section</h4>
                        
-                       <ul>
-                           <li>Small</li>
-                           <li>Medium</li>
-                           <li>Large</li>
-                       </ul>  
+
                        
-                       <hr>
+
                    
                </div><!-- box Finish -->
 

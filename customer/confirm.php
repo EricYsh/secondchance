@@ -23,189 +23,159 @@ if(isset($_GET['order_id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>M-Dev Store</title>
+    <title>Second Chance</title>
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-   
-   <div id="top"><!-- Top Begin -->
-       
-       <div class="container"><!-- container Begin -->
-           
-           <div class="col-md-6 offer"><!-- col-md-6 offer Begin -->
-               
-               <a href="#" class="btn btn-success btn-sm">
-                   
-                   <?php 
-                   
-                   if(!isset($_SESSION['customer_email'])){
-                       
-                       echo "Welcome: Guest";
-                       
-                   }else{
-                       
-                       echo "Welcome: " . $_SESSION['customer_email'] . "";
-                       
-                   }
-                   
-                   ?>
-               
-               </a>
-               <a href="checkout.php"> <?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?> </a>
-               
-           </div><!-- col-md-6 offer Finish -->
-           
-           <div class="col-md-6"><!-- col-md-6 Begin -->
-               
-               <ul class="menu"><!-- cmenu Begin -->
-                   
-                   <li>
-                       <a href="../customer_register.php">Register</a>
-                   </li>
-                   <li>
-                       <a href="my_account.php">My Account</a>
-                   </li>
-                   <li>
-                       <a href="../cart.php">Go To Cart</a>
-                   </li>
-                   <li>
-                       <a href="../checkout.php">
-                       
-                        <?php 
-                           
-                           if(!isset($_SESSION['customer_email'])){
-                       
-                                echo "<a href='checkout.php'> Login </a>";
 
-                               }else{
+<div id="top"><!-- Top Begin -->
 
-                                echo " <a href='logout.php'> Log Out </a> ";
+    <div class="container"><!-- container Begin -->
 
-                               }
-                           
-                         ?>
-                       
-                       </a>
-                   </li>
-                   
-               </ul><!-- menu Finish -->
-               
-           </div><!-- col-md-6 Finish -->
-           
-       </div><!-- container Finish -->
-       
-   </div><!-- Top Finish -->
-   
-   <div id="navbar" class="navbar navbar-default"><!-- navbar navbar-default Begin -->
-       
-       <div class="container"><!-- container Begin -->
-           
-           <div class="navbar-header"><!-- navbar-header Begin -->
-               
-               <a href="../index.php" class="navbar-brand home"><!-- navbar-brand home Begin -->
-                   
-                   <img src="images/ecom-store-logo.png" alt="M-dev-Store Logo" class="hidden-xs">
-                   <img src="images/ecom-store-logo-mobile.png" alt="M-dev-Store Logo Mobile" class="visible-xs">
-                   
-               </a><!-- navbar-brand home Finish -->
-               
-               <button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-                   
-                   <span class="sr-only">Toggle Navigation</span>
-                   
-                   <i class="fa fa-align-justify"></i>
-                   
-               </button>
-               
-               <button class="navbar-toggle" data-toggle="collapse" data-target="#search">
-                   
-                   <span class="sr-only">Toggle Search</span>
-                   
-                   <i class="fa fa-search"></i>
-                   
-               </button>
-               
-           </div><!-- navbar-header Finish -->
-           
-           <div class="navbar-collapse collapse" id="navigation"><!-- navbar-collapse collapse Begin -->
-               
-               <div class="padding-nav"><!-- padding-nav Begin -->
-                   
-                   <ul class="nav navbar-nav left"><!-- nav navbar-nav left Begin -->
-                       
-                       <li>
-                           <a href="../index.php">Home</a>
-                       </li>
-                       <li>
-                           <a href="../shop.php">Shop</a>
-                       </li>
-                       <li class="active">
-                           <a href="my_account.php">My Account</a>
-                       </li>
-                       <li>
-                           <a href="../cart.php">Shopping Cart</a>
-                       </li>
-                       <li>
-                           <a href="../contact.php">Contact Us</a>
-                       </li>
-                       
-                   </ul><!-- nav navbar-nav left Finish -->
-                   
-               </div><!-- padding-nav Finish -->
-               
-               <a href="../cart.php" class="btn navbar-btn btn-primary right"><!-- btn navbar-btn btn-primary Begin -->
-                   
-                   <i class="fa fa-shopping-cart"></i>
-                   
-                   <span><?php items(); ?> Items In Your Cart</span>
-                   
-               </a><!-- btn navbar-btn btn-primary Finish -->
-               
-               <div class="navbar-collapse collapse right"><!-- navbar-collapse collapse right Begin -->
-                   
-                   <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search"><!-- btn btn-primary navbar-btn Begin -->
-                       
-                       <span class="sr-only">Toggle Search</span>
-                       
-                       <i class="fa fa-search"></i>
-                       
-                   </button><!-- btn btn-primary navbar-btn Finish -->
-                   
-               </div><!-- navbar-collapse collapse right Finish -->
-               
-               <div class="collapse clearfix" id="search"><!-- collapse clearfix Begin -->
-                   
-                   <form method="get" action="results.php" class="navbar-form"><!-- navbar-form Begin -->
-                       
-                       <div class="input-group"><!-- input-group Begin -->
-                           
-                           <input type="text" class="form-control" placeholder="Search" name="user_query" required>
-                           
-                           <span class="input-group-btn"><!-- input-group-btn Begin -->
-                           
-                           <button type="submit" name="search" value="Search" class="btn btn-primary"><!-- btn btn-primary Begin -->
-                               
-                               <i class="fa fa-search"></i>
-                               
-                           </button><!-- btn btn-primary Finish -->
-                           
-                           </span><!-- input-group-btn Finish -->
-                           
-                       </div><!-- input-group Finish -->
-                       
-                   </form><!-- navbar-form Finish -->
-                   
-               </div><!-- collapse clearfix Finish -->
-               
-           </div><!-- navbar-collapse collapse Finish -->
-           
-       </div><!-- container Finish -->
-       
-   </div><!-- navbar navbar-default Finish -->
-   
-   <div id="content"><!-- #content Begin -->
+        <div class="col-md-4 offer"><!-- col-md-6 offer Begin -->
+            <ul style="list-style-type:none; padding-top: 15px; margin: 0px; text-align: left;">
+                <li>
+                    <a href="../index.php" style="font-size:180%;">Second Chance</a>
+                </li>
+            </ul>
+        </div><!-- col-md-6 offer Finish -->
+
+        <!-- 搜索在此 -->
+        <div class="col-md-4"><!-- col-md-4 Begin -->
+            <ul style="list-style-type:none; padding-top: 15px; margin: 0px; text-align: left;">
+                <li>
+                    <form class="form-inline" role="search" action="/Search/SearchList" method="get" target="_blank">
+                        <div class="form-group">
+                            <input name="KeyWord" class="form-control mr-sm-2" type="text" placeholder="Search">
+                        </div>
+                        <button class="btn my-2 my-sm-0" type="submit" style="background:none; margin-left:-4rem; color:#ff9d00;" >
+                            <i class="fa fa-search" ></i>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+
+        </div><!-- col-md-4 Finish -->
+
+        <!-- 购物车、登陆、登出在此 -->
+        <div class="col-md-4"><!-- col-md-4 Begin -->
+
+            <ul class="menu"><!-- cmenu Begin -->
+                <li>
+                    <!-- <a href="cart.php">Cart</a> -->
+                    <a href="../cart.php" class="btn navbar-btn btn-primary right"><!-- btn navbar-btn btn-primary Begin -->
+
+                        <i class="fa fa-shopping-cart"></i>
+
+                        <span><?php items(); ?> Items</span>
+
+                    </a><!-- btn navbar-btn btn-primary Finish -->
+                </li>
+
+                <li class="<?php if($active=='Account') echo"active"; ?>">
+
+                    <?php
+
+                    if(!isset($_SESSION['customer_email'])){
+
+                        echo"<a href='../checkout.php'>My Account</a>";
+
+                    }else{
+
+                        echo"<a href='my_account.php?my_orders'>My Account</a>";
+
+                    }
+
+                    ?>
+
+                </li>
+
+                <li>
+                    <a href="checkout.php">
+
+                        <?php
+
+                        if(!isset($_SESSION['customer_email'])){
+
+                            echo "<a href='checkout.php'> Login </a>";
+
+                        }else{
+
+                            echo " <a href='logout.php'> Log Out </a> ";
+
+                        }
+
+                        ?>
+
+                    </a>
+                </li>
+            </ul><!-- menu Finish -->
+
+        </div><!-- col-md-4 Finish -->
+
+    </div><!-- container Finish -->
+
+</div><!-- Top Finish -->
+
+<div id="navbar" class="navbar navbar-default"><!-- navbar navbar-default Begin -->
+
+    <div class="container"><!-- container Begin -->
+
+        <div class="navbar-header"><!-- navbar-header Begin -->
+
+            <!-- <a href="index.php" class="navbar-brand home">
+                <img src="images/ecom-store-logo.png" alt="M-dev-Store Logo" class="hidden-xs">
+                <img src="images/ecom-store-logo-mobile.png" alt="M-dev-Store Logo Mobile" class="visible-xs">
+            </a> -->
+
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+
+                <span class="sr-only">Toggle Navigation</span>
+
+                <i class="fa fa-align-justify"></i>
+
+            </button>
+
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#search">
+
+                <span class="sr-only">Toggle Search</span>
+
+                <i class="fa fa-search"></i>
+
+            </button>
+
+        </div><!-- navbar-header Finish -->
+
+        <div class="navbar-collapse collapse" id="navigation"><!-- navbar-collapse collapse Begin -->
+
+            <div class="padding-nav"><!-- padding-nav Begin -->
+
+                <ul class="nav navbar-nav left"><!-- nav navbar-nav left Begin -->
+
+                    <li class="<?php if($active=='Home') echo"active"; ?>">
+                        <a href="../index.php">Home</a>
+                    </li>
+                    <li class="<?php if($active=='Shop') echo"active"; ?>">
+                        <a href="../shop.php">Shop</a>
+                    </li>
+
+                    <!-- <li class="<?php if($active=='Cart') echo"active"; ?>">
+                           <a href="cart.php">Shopping Cart</a>
+                       </li> -->
+
+                </ul><!-- nav navbar-nav left Finish -->
+
+            </div><!-- padding-nav Finish -->
+
+        </div><!-- navbar-collapse collapse Finish -->
+
+    </div><!-- container Finish -->
+
+</div><!-- navbar navbar-default Finish -->
+
+<div id="content"><!-- #content Begin -->
        <div class="container"><!-- container Begin -->
            <div class="col-md-12"><!-- col-md-12 Begin -->
                
@@ -215,6 +185,9 @@ if(isset($_GET['order_id'])){
                    </li>
                    <li>
                        My Account
+                   </li>
+                   <li>
+                       Confirm Payment
                    </li>
                </ul><!-- breadcrumb Finish -->
                
@@ -234,13 +207,13 @@ if(isset($_GET['order_id'])){
                
                <div class="box"><!-- box Begin -->
                    
-                   <h1 align="center"> Please confirm your payment</h1>
+                   <h1 align="center"> Please Confirm Your Payment</h1>
                    
                    <form action="confirm.php?update_id=<?php echo $order_id;  ?>" method="post" enctype="multipart/form-data"><!-- form Begin -->
                        
                        <div class="form-group"><!-- form-group Begin -->
                            
-                         <label> Invoice No: </label>
+                         <label> Invoice No: 这个自动生成一下？ </label>
                           
                           <input type="text" class="form-control" name="invoice_no" required>
                            
@@ -248,7 +221,7 @@ if(isset($_GET['order_id'])){
                        
                        <div class="form-group"><!-- form-group Begin -->
                            
-                         <label> Amount Sent: </label>
+                         <label> Amount Sent: 加 相应购买数量，我们的一般都是1个吧</label>
                           
                           <input type="text" class="form-control" name="amount_sent" required>
                            
@@ -256,7 +229,7 @@ if(isset($_GET['order_id'])){
                        
                        <div class="form-group"><!-- form-group Begin -->
                            
-                         <label> Select Payment Mode: </label>
+                         <label> Select Payment Mode: 这个删了？</label>
                           
                           <select name="payment_mode" class="form-control"><!-- form-control Begin -->
                               
@@ -272,7 +245,7 @@ if(isset($_GET['order_id'])){
                        
                        <div class="form-group"><!-- form-group Begin -->
                            
-                         <label> Transaction / Reference ID: </label>
+                         <label> Transaction / Reference ID: 这个删了？</label>
                           
                           <input type="text" class="form-control" name="ref_no" required>
                            
@@ -288,7 +261,7 @@ if(isset($_GET['order_id'])){
                        
                        <div class="form-group"><!-- form-group Begin -->
                            
-                         <label> Payment Date: </label>
+                         <label> Payment Date: 自动生成当日时间</label>
                           
                           <input type="text" class="form-control" name="date" required>
                            
@@ -359,7 +332,7 @@ if(isset($_GET['order_id'])){
    
    <?php 
     
-    include("includes/footer.php");
+    include("../includes/footer.php");
     
     ?>
     
